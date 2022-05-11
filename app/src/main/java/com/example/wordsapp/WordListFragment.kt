@@ -9,9 +9,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wordsapp.databinding.FragmentWordListBinding
 
-/**
- * Displays a [RecyclerView] of words with search buttons to look them up.
- */
 class WordListFragment : Fragment() {
 
     companion object {
@@ -37,7 +34,6 @@ class WordListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Retrieve and inflate the layout for this fragment
         _binding = FragmentWordListBinding.inflate(inflater, container, false)
         return binding.root
     }

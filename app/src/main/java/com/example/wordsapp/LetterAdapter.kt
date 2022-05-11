@@ -45,18 +45,6 @@ class LetterAdapter :
 
 
 
-
-
-
-
-
-
-
-
-
-
-    // Setup custom accessibility delegate to set the text read with
-    // an accessibility service
     companion object Accessibility : View.AccessibilityDelegate() {
         @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
         override fun onInitializeAccessibilityNodeInfo(
@@ -64,10 +52,6 @@ class LetterAdapter :
             info: AccessibilityNodeInfo?
         ) {
             super.onInitializeAccessibilityNodeInfo(host, info)
-            // With `null` as the second argument to [AccessibilityAction], the
-            // accessibility service announces "double tap to activate".
-            // If a custom string is provided,
-            // it announces "double tap to <custom string>".
             val customString = host?.context?.getString(R.string.look_up_words)
             val customClick =
                 AccessibilityNodeInfo.AccessibilityAction(
