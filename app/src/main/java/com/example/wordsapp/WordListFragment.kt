@@ -27,7 +27,6 @@ class WordListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Retrieve the LETTER from the Fragment arguments
         arguments?.let {
             letterId = it.getString(LETTER).toString()
         }
@@ -48,7 +47,6 @@ class WordListFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = WordAdapter(letterId, requireContext())
 
-        // Adds a [DividerItemDecoration] between items
         recyclerView.addItemDecoration(
             DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
         )
